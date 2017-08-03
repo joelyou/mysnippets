@@ -3,27 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>mt_dis</string>
+	<string>mt_init</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+	<string>    self = [super init];
+    if (self) {
         
-    });
-</string>
+    }
+    return self;</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>B5B416EA-8E35-4AA7-8AF8-C78835B3E402</string>
+	<string>BD322DDC-17CE-41AC-9744-302FA5C399A2</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>MT dispatch async</string>
+	<string>MT_Init</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>MT dispatch async</string>
+	<string>MT_Init</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>wjpagetimemethod</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#define kCacheInfosKey @"kCacheInfosKey"
+
+NSNumber *_pageTime;//分页No
+NSInteger _Req;
+NSMutableArray *_Infos;
+
+- (void)commonInit {
+    _Infos = [NSMutableArray new];
+}
+
+[_tableView addHeaderRefreshView];
+
+- (void)setUpInfoData {
+    
+    NSArray *cache = [self unarchiveWithKey:kCacheInfosKey];
+    [_Infos addObjectsFromArray:cache];
+    
+    if (!_Infos.count) {
+        [self showLoadingView];
+    }
+    
+    [self requestMethodName:YES];
+}
+
+- (void)onHeaderRefreshData:(UIScrollView *)scrollView {
+    [self requestMethodName:YES];
+}
+
+- (void)onFooterRefreshData:(UIScrollView *)scrollView {
+    [self requestMethodName:NO];
+}
+
+//第一次加载or上拉刷新 reload = YES
+- (void)requestMethodName:(BOOL)reload {
+    if (_Req) return;
+    if (reload) _pageTime = @(0);
+    
+    FYRequest *req = [FYRequest new];
+    req.time = _pageTime;
+    req.pageSize = 20;
+    _Req = [req startRequest:^(BOOL success, HttpReqResult *result) {
+        _Req = 0;
+        [self hideLoadingView];
+        if (success) {
+            NSArray *Infos = result.resultObj[KEY_OBJECT];
+            NSInteger amount = [result.resultObj[KEY_COUNT] integerValue];
+            _pageTime = result.resultObj[KEY_TIME];
+            if (reload) {
+                [_Infos removeAllObjects];
+                //cache
+                [self archive:Infos withKey:kCacheInfosKey];
+            }
+            [_Infos addObjectsFromArray:Infos];
+            
+            if (_Infos.count &gt;= amount || Infos.count == 0) {
+                [_tableView removeFooterRefreshView];
+            } else {
+                [_tableView addFooterRefreshView];
+            }
+            [_tableView reloadData];
+        } else {
+            if (_Infos.count == 0) {
+                [self showNoDataView:FYNoDataTypeNoData];
+            } else {
+                [self presentFailureTips:result.errMsg];
+            }
+        }
+        [_tableView endRefreshView];
+    }];
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>59B4A212-7AE8-49BB-8A87-C7123C8A239C</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>time page method in vc</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Page Time Method</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -3,27 +3,32 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>extension</string>
+	<string>kjlabelinit</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>TopLevel</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@interface &lt;#name#&gt; ()
-
-@end
-</string>
+	<string>_&lt;#labelName#&gt; = ({
+     UILabel *aLabel = [[UILabel alloc]init];
+     aLabel.textColor = &lt;#color#&gt;;
+     aLabel.font = UIFontFormSize(&lt;#font#&gt;);
+     aLabel.textAlignment = NSTextAlignmentCenter;
+     aLabel.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
+     aLabel.backgroundColor  = [UIColor clearColor];
+     aLabel;
+ });</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>B8F4A1E8-87C4-4DA5-BA74-F763722AEB97</string>
+	<string>E0525F61-96D4-452D-B07A-556BB5A9429E</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>Class Extention</string>
+	<string>init a label</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Class Extention</string>
+	<string>UILabelInit</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>kjcellindex</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (UITableViewCell *)&lt;#cellName#&gt;Cell:(UITableView *)tableView atIndexPath:(NSIndexPath *)indexPath {
+    static NSString *cellReuseId = @"&lt;#cellName#&gt;CellReuseId";
+    &lt;#cellClass#&gt; *cell = [tableView dequeueReusableCellWithIdentifier:cellReuseId];
+    if (!cell) {
+        cell = [[&lt;#cellClass#&gt; alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellReuseId];
+    }
+    return cell;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>5B2A500E-A48A-4642-A474-334B6818F20E</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>create a kind of cell</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>CellAtIndex</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

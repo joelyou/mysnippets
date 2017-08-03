@@ -3,27 +3,37 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>mt_hidden_keyboard</string>
+	<string>kjcelltype</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    [super touchesBegan:touches withEvent:event];
-    [self.view endEditing:YES];
+	<string>&lt;#CellEnumType#&gt; type = [_cellTypes[indexPath.row] integerValue];
+switch (type) {
+    case &lt;#constant#&gt;:{
+        break;
+    }
+    case &lt;#constant#&gt;:{
+        break;
+    }
+    case &lt;#constant#&gt;:{
+        break;
+    }
+    default:
+        break;
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>AC4B30B1-4BCB-43AB-8216-CD30AF5634AB</string>
+	<string>D964F600-BA6D-4213-BA18-B1BC115B405B</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>MT_hidden_keyboard</string>
+	<string>manage tableView's cell type</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>MT_hidden_keyboard</string>
+	<string>UICellTypeManage</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>

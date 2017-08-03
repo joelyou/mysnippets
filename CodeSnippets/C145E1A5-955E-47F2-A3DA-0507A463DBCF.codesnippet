@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>kjtableviewinit</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>_&lt;#tableView#&gt; = ({
+        UITableView *aTableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        aTableView.delegate = self;
+        aTableView.dataSource = self;
+        aTableView.backgroundColor = [UIColor clearColor];
+        aTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        aTableView.showsVerticalScrollIndicator = NO;
+        aTableView.showsHorizontalScrollIndicator = NO;
+        aTableView;
+    });</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>C145E1A5-955E-47F2-A3DA-0507A463DBCF</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>init table view</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UITableViewInit</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

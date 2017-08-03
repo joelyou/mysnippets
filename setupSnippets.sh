@@ -1,13 +1,13 @@
 #!/bin/bash
 
-DST_DIR=/Users/`users`/Library/Developer/Xcode/UserData/CodeSnippets
+DST_DIR=/Users/virgilTang/Library/Developer/Xcode/UserData/CodeSnippets
 
 if [ -d $DST_DIR ]; then
-    mv /Users/`users`/Library/Developer/Xcode/UserData/CodeSnippets /Users/`users`/Library/Developer/Xcode/UserData/CodeSnippets.bak
+    mv /Users/virgilTang/Library/Developer/Xcode/UserData/CodeSnippets /Users/virgilTang/Library/Developer/Xcode/UserData/CodeSnippets.bak
 fi
 
 
 SRC_HOME=`pwd`
-cp -r ${SRC_HOME}/CodeSnippets/* $DST_DIR
+cp -r $DST_DIR ${SRC_HOME}/
 echo "done"
 

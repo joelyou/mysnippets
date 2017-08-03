@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>kjpagetimerequest</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>@property (nonatomic, assign) NSNumber *time;
+@property (nonatomic, assign) NSInteger pageSize;
+
+- (NSString *)businessUrl {
+    return &lt;#url#&gt;;
+}
+
+- (NSString *)requestJsonPara {
+    NSMutableDictionary* dict = [NSMutableDictionary dictionary];
+    dict[@"time"] = self.time ?: @(0);
+    dict[@"pageSize"] = @(self.pageSize);
+    return [dict jsonString];
+}
+
+- (id)parseResultObject:(id)jsonValue {
+    if (!IS_DICTIONARY(jsonValue)) return nil;
+
+    NSMutableDictionary *dict = [NSMutableDictionary new];
+    &lt;#parse#&gt;
+    parseResultNumber(jsonValue, @"count", dict, KEY_COUNT);
+    parseResultNumber(jsonValue, @"time", dict, KEY_TIME);
+    return dict;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>680BF7D8-9C0A-4198-80A7-96F4F63B2606</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>time page in request file</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Page Time Request</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

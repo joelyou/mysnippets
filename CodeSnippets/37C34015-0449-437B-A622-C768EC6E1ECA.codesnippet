@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>mt_timer</string>
+	<string>kj_timer</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
@@ -28,12 +28,12 @@ self.&lt;#timer#&gt; = [NSTimer scheduledTimerWithTimeInterval:&lt;#1.5#&gt; tar
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>MT_Timer</string>
+	<string>Timer cycle </string>
 	<key>IDECodeSnippetTitle</key>
-	<string>MT_Timer</string>
+	<string>Timer init</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>

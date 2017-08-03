@@ -3,35 +3,27 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>mt_search_controller</string>
+	<string>mt_hidden_keyboard</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>- (void)setupSearchController
-{
-    _searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
-    _searchController.searchResultsUpdater = self;
-    _searchController.hidesNavigationBarDuringPresentation = YES;
-    _searchController.dimsBackgroundDuringPresentation = NO;
-    
-    [_searchController.searchBar sizeToFit];
-    
-    self.tableView.tableHeaderView = _searchController.searchBar;
-}
-</string>
+	<string>- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [super touchesBegan:touches withEvent:event];
+    [self.view endEditing:YES];
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>A8B1F089-A60D-4C65-9A42-89006BB89008</string>
+	<string>AC4B30B1-4BCB-43AB-8216-CD30AF5634AB</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>MT Search Controller</string>
+	<string>MT_hidden_keyboard</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>MT Search Controller</string>
+	<string>MT_hidden_keyboard</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>

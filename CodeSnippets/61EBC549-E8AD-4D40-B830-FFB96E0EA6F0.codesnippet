@@ -3,26 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>dox</string>
+	<string>kjppweak</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>ClassInterfaceMethods</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/**
-     * 
-     */</string>
+	<string>@property (nonatomic, weak  ) id&lt;&lt;#delegate#&gt;&gt; delegate;</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>4B002C08-1CCD-4AF0-8462-883E563AE2C3</string>
+	<string>61EBC549-E8AD-4D40-B830-FFB96E0EA6F0</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>Doxygen</string>
+	<string>weak property</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Doxygen</string>
+	<string>PropertyWeak</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>
